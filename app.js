@@ -11,10 +11,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api/testing", require("./routes/apiRoutes"));
 app.use("/", require("./routes/apiRoutes"));
 
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
-
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });

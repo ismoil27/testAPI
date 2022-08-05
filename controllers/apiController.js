@@ -1,9 +1,9 @@
 const db = require("../configs/db.js");
 
 // Redirect to all testing
-const redirectAPIES = (req, res) => {
-  res.redirect("/api/testing");
-};
+// const redirectAPIES = (req, res) => {
+//  res.redirect("/api/testing");
+// };
 
 // Get all testing
 const getAPIES = (req, res) => {
@@ -22,7 +22,6 @@ const getAPI = (req, res) => {
       console.log(err);
     }
     res.status(200).send(results);
-    console.log(results);
   });
 };
 
@@ -37,7 +36,7 @@ const setAPI = (req, res) => {
       console.log("err", err);
     }
   });
-  res.status(200).json(req.body);
+  res.status(200).json({ message: req.body });
 };
 
 // Update testing
@@ -75,5 +74,4 @@ module.exports = {
   setAPI,
   updateAPI,
   deleteAPI,
-  redirectAPIES,
 };

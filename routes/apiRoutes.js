@@ -7,10 +7,9 @@ const {
   setAPI,
   updateAPI,
   deleteAPI,
-  redirectAPIES,
 } = require("../controllers/apiController");
 
-router.route("/").get(getAPIES).post(setAPI).get(redirectAPIES);
+router.route("/").get(getAPIES).post(setAPI);
 // router.route("/api/v1/setData").post(setBlog);
 router.route("/:id").put(updateAPI).delete(deleteAPI).get(getAPI);
 
